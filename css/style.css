@@ -1,0 +1,374 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:white;
+}
+
+/* MAIN */
+
+.main-container{
+    width:100%;
+}
+
+/* HERO SECTION */
+
+.hero-section{
+    width:100%;
+}
+
+/* SLIDER */
+
+.slider{
+    position:relative;
+}
+
+.slide{
+    display:none;
+}
+
+.slide.active{
+    display:block;
+}
+
+/* HERO IMAGE */
+
+.hero-image{
+    width:100%;
+    height:650px;
+    background:#46a6e9;
+}
+
+.second{
+    background:#4db8ff;
+}
+
+.third{
+    background:#5ac8fa;
+}
+
+/* ARROWS */
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    background:white;
+    border:none;
+
+    width:45px;
+    height:45px;
+
+    cursor:pointer;
+
+    font-size:20px;
+}
+
+.prev{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    background:#0f2d47;
+
+    color:white;
+
+    padding:40px 24px;
+
+    position:relative;
+}
+
+/* EYEBROW */
+
+.hero-content small{
+    font-size:14px;
+
+    font-weight:600;
+
+    display:block;
+
+    margin-bottom:18px;
+}
+
+/* TITLE */
+
+.hero-content h1{
+    font-size:64px;
+
+    font-weight:300;
+
+    line-height:1.1;
+
+    margin-bottom:22px;
+}
+
+/* PARAGRAPH */
+
+.hero-content p{
+    max-width:720px;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+    margin-bottom:28px;
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+/* BUTTON */
+
+.buttons button{
+    width:160px;
+
+    height:56px;
+
+    font-size:16px;
+
+    cursor:pointer;
+}
+
+/* WHITE BUTTON */
+
+.btn-white{
+    background:white;
+
+    color:black;
+
+    border:1px solid white;
+}
+
+/* DARK BUTTON */
+
+.btn-dark{
+    background:transparent;
+
+    color:white;
+
+    border:1px solid white;
+}
+
+/* DOTS */
+
+.dots{
+    position:absolute;
+
+    right:30px;
+
+    bottom:24px;
+
+    display:flex;
+
+    gap:10px;
+}
+
+.dot{
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#d9d9d9;
+
+    cursor:pointer;
+}
+
+.dot.active{
+    background:white;
+}
+
+/* HEADING */
+
+.heading-section{
+    text-align:center;
+
+    padding:60px 20px;
+}
+
+.heading-section h2{
+    font-size:56px;
+}
+
+/* PRODUCTS */
+
+.products-section{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:8px;
+
+    padding:18px;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+     width:100%;
+    height:710px;
+
+    background:#63b357;
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* PRODUCT INFO */
+
+.product-info{
+    position:absolute;
+
+    bottom:20px;
+
+    left:15px;
+
+    right:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    color:white;
+}
+
+/* LEFT */
+
+.left-content small{
+    display:block;
+
+    font-size:11px;
+
+    margin-bottom:5px;
+}
+
+.left-content h4{
+    font-size:16px;
+}
+
+/* PRICE */
+
+.price{
+    font-size:15px;
+
+    font-weight:bold;
+}
+
+/* TABS
+
+.tabs-section{
+    padding:40px 20px;
+}
+
+/* TAB BUTTONS */
+
+/* .tabs{
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:20px;
+}
+
+.tab-btn{
+    padding:14px 24px;
+
+    border:none;
+
+    background:#ddd;
+
+    cursor:pointer;
+}
+
+.tab-btn.active{
+    background:#0f2d47;
+
+    color:white;
+} */ */
+
+/* TAB CONTENT */
+
+.tab-content{
+    display:none;
+
+    padding:20px;
+
+    border:1px solid #ddd;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+/* TABLET */
+
+@media(max-width:992px){
+
+    .products-section{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .hero-image{
+        height:300px;
+    }
+
+    .hero-content{
+        padding:20px;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .products-section{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-card{
+        height:320px;
+    }
+
+    .tabs{
+        flex-direction:column;
+    }
+
+}
